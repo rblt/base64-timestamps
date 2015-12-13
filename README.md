@@ -8,8 +8,14 @@ representations, and vica versa, thus saving bandwith on the wire.
 Encoding and decoding is supported in both C# and JavaScript, so it
 can be used in ASP.NET or NodeJS/browser environment also.
 The idea behind encoding is similar to wrapping polyline coordinates like
-Google/Microsoft does, it only encodes differences from the initial
+Google/Bing maps do, it only encodes differences from the initial
 value. For more details, see the comments in the C# sourcecodes.
+
+#### Solution
+
+The TypeScript and C# source codes are contained in a Visual Studio 2015 solution,
+more specially in separeted projects: one project for the TypeScript codes and
+Jasmine tests, and two other projects for the C# codes and Moq/MSPEC tests.
 
 #### Usage examples
 
@@ -27,7 +33,7 @@ string encTimeStamps = Convert.EncodeTimeStamps( timestamps );
 require(['path/to/tools'], function(tools) {
   var timestamps = [ new Date(...), ..., new Date(...) ];
   var encTimeStamps = tools.Convert.encodeTimeStamps( timestamps );
-}
+});
 ```
 Decode timestamps:
 
@@ -43,7 +49,7 @@ DateTime[] timeStamps = Convert.DecodeTimeStamps( encTimeStamps );
 require(['path/to/tools'], function(tools) {
   var encTimeStamps = 'QPM3HH8gKMD///eP/x8AAP//AAD///8/';
   var timestamps = tools.Convert.decodeTimeStamps( encTimeStamps );
-}
+});
 ```
 
 #### Remarks
