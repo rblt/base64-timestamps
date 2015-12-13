@@ -1,0 +1,8 @@
+bin
+obj
+**/*.js
+**/*.map
+*.suo
+*.user
+packages
+.vs
