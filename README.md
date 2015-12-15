@@ -22,14 +22,14 @@ Jasmine tests, and two other projects for the C# codes and Moq/MSPEC tests.
 Encode timestamps:
 
 **C#**
-```
+```c#
 using rblt.Tools;
 
 System.DateTime[] timestamps = new System.DateTime[] { ... };
 string encTimeStamps = Convert.EncodeTimeStamps( timestamps );
 ```
 **Javascript**
-```
+```js
 require(['path/to/tools'], function(tools) {
   var timestamps = [ new Date(...), ..., new Date(...) ];
   var encTimeStamps = tools.Convert.encodeTimeStamps( timestamps );
@@ -38,14 +38,14 @@ require(['path/to/tools'], function(tools) {
 Decode timestamps:
 
 **C#**
-```
+```c#
 using rblt.Tools;
 
 string encTimeStamps = "QPM3HH8gKMD///eP/x8AAP//AAD///8/";
 DateTime[] timeStamps = Convert.DecodeTimeStamps( encTimeStamps );
 ```
 **Javascript**
-```
+```js
 require(['path/to/tools'], function(tools) {
   var encTimeStamps = 'QPM3HH8gKMD///eP/x8AAP//AAD///8/';
   var timestamps = tools.Convert.decodeTimeStamps( encTimeStamps );
